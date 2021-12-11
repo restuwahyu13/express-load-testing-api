@@ -1,0 +1,26 @@
+{
+  "name": "express-load-testing-api",
+  "version": "1.0.0",
+  "description": "Example load testing API using locusts",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start ecosystem.config.js",
+    "test": "locust -f locustfiles.py -H http://localhost:3000 -u 10000 -r 100 -t 3m --headless"
+  },
+  "keywords": [
+    "express",
+    "nodejs"
+  ],
+  "author": "restuwahyu13",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "http-graceful-shutdown": "^3.1.5"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0"
+  }
+}
